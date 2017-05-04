@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Online Magnet Link Generator</title>
+	<script src="magnet.js"></script>
+	<link rel="stylesheet" type="text/css" href="magnet.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous"/>
+</head>
+<body>
+
+<form name="form" onsubmit="update(); return false;">
+<div class="formbox">
+	<div class="form-group">
+		<label for="hash">Info Hash:</label>
+		<input id="hash" class="form-control" onclick="sel_all(this);"/>
+	</div>
+	<div class="form-group">
+		<label for="link_text">Magnet Link:</label>
+		<input id="link_text" class="form-control" onclick="sel_all(this);"/>
+	</div>
+	<input  class="btn btn-default" type="submit" value="Generate"/>
+	<a href="#" id="link" class="btn btn-default">Open Magnet</a>
+</div>
+</form>
+
+</body>
+</html>
