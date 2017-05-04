@@ -32,25 +32,26 @@ function sel_all(el){
 
 function update(){
 	try{
-		var data  = 'magnet:';
-			data += '?xt=urn:btih:' + encUri(document.getElementById('hash').value);
-			data += '&tr=' + encUri('udp://tracker.coppersurfer.tk:6969/announce');
-			data += '&tr=' + encUri('udp://tracker.internetwarriors.net:1337/announce');
-			data += '&tr=' + encUri('udp://tracker.leechers-paradise.org:6969/announce');
-			data += '&tr=' + encUri('http://tracker.internetwarriors.net:1337/announce');
-			data += '&tr=' + encUri('udp://tracker.opentrackr.org:1337/announce');
-			data += '&tr=' + encUri('http://tracker.opentrackr.org:1337/announce');
-			data += '&tr=' + encUri('udp://tracker.zer0day.to:1337/announce');
-			data += '&tr=' + encUri('udp://tracker.pirateparty.gr:6969/announce');
-			data += '&tr=' + encUri('http://explodie.org:6969/announce');
-			data += '&tr=' + encUri('http://p4p.arenabg.com:1337/announce');
-			data += '&tr=' + encUri('http://mgtracker.org:6969/announce');
 		var hash_data = document.getElementById('hash').value;
+		if(checkHash(hash_data)){
+			var data  = 'magnet:';
+				data += '?xt=urn:btih:' + encUri(document.getElementById('hash').value);
+				data += '&tr=' + encUri('udp://tracker.coppersurfer.tk:6969/announce');
+				data += '&tr=' + encUri('udp://tracker.internetwarriors.net:1337/announce');
+				data += '&tr=' + encUri('udp://tracker.leechers-paradise.org:6969/announce');
+				data += '&tr=' + encUri('http://tracker.internetwarriors.net:1337/announce');
+					data += '&tr=' + encUri('udp://tracker.opentrackr.org:1337/announce');
+				data += '&tr=' + encUri('http://tracker.opentrackr.org:1337/announce');
+				data += '&tr=' + encUri('udp://tracker.zer0day.to:1337/announce');
+				data += '&tr=' + encUri('udp://tracker.pirateparty.gr:6969/announce');
+				data += '&tr=' + encUri('http://explodie.org:6969/announce');
+				data += '&tr=' + encUri('http://p4p.arenabg.com:1337/announce');
+				data += '&tr=' + encUri('http://mgtracker.org:6969/announce');
+			document.getElementById('link').href = data;
+			document.getElementById('link_text').value = data;
+		}
 		var uri  = location.protocol + '//' + location.hostname + location.pathname;
 			uri += checkHash(hash_data) ? '?hash='+hash_data : '';
-		document.getElementById('link').href = data;
-		document.getElementById('link_text').value = data;
-		//document.getElementById('page').href = uri;
 	}
 	catch(e){
 		alert('exception: ' + e);
