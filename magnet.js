@@ -58,5 +58,5 @@ function update(){
 }
 
 function checkHash(hash){
-	return hash.match(/^[A-Za-z0-9]+$/) && hash.length < 41 ? hash : false;
+	return hash.length == 32 && hash.match(/^[2-7A-Za-z]+$/) || hash.length == 40 && hash.match(/^[0-9A-Fa-f]+$/) ? hash : false;
 }
