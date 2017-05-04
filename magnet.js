@@ -40,7 +40,7 @@ function update(){
 				data += '&tr=' + encUri('udp://tracker.internetwarriors.net:1337/announce');
 				data += '&tr=' + encUri('udp://tracker.leechers-paradise.org:6969/announce');
 				data += '&tr=' + encUri('http://tracker.internetwarriors.net:1337/announce');
-					data += '&tr=' + encUri('udp://tracker.opentrackr.org:1337/announce');
+				data += '&tr=' + encUri('udp://tracker.opentrackr.org:1337/announce');
 				data += '&tr=' + encUri('http://tracker.opentrackr.org:1337/announce');
 				data += '&tr=' + encUri('udp://tracker.zer0day.to:1337/announce');
 				data += '&tr=' + encUri('udp://tracker.pirateparty.gr:6969/announce');
