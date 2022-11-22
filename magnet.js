@@ -12,7 +12,10 @@ onReady(function(){
 	var thash = getUri('hash')[0] && checkHash(getUri('hash')[1]) ? getUri('hash')[1] : false;
 	if(thash){
 		document.getElementById('hash').value = thash;
-		update();
+		var urlr = update();
+		if(urlr){
+			window.location.replace(urlr);
+		}
 	}
 });
 
@@ -52,9 +55,11 @@ function update(){
 		}
 		var uri  = location.protocol + '//' + location.hostname + location.pathname;
 			uri += checkHash(hash_data) ? '?hash='+hash_data : '';
+		return uri;
 	}
 	catch(e){
 		alert('exception: ' + e);
+		return false;
 	}
 }
 
