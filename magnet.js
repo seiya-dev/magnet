@@ -40,6 +40,21 @@ function update(){
 		if(checkHash(hash_data)){
 			var data  = 'magnet:';
 				data += '?xt=urn:btih:' + encUri(document.getElementById('hash').value);
+				data += '&tr=' + encUri('http://nyaa.tracker.wf:7777/announce
+				data += '&tr=' + encUri('udp://tracker.coppersurfer.tk:6969/announce');
+				data += '&tr=' + encUri('udp://tracker.opentrackr.org:1337/announce');
+				data += '&tr=' + encUri('udp://9.rarbg.to:2710/announce');
+				data += '&tr=' + encUri('udp://9.rarbg.me:2710/announce');
+				data += '&tr=' + encUri('udp://tracker.leechers-paradise.org:6969/announce');
+				data += '&tr=' + encUri('udp://tracker.internetwarriors.net:1337/announce');
+				data += '&tr=' + encUri('udp://tracker.cyberia.is:6969/announce');
+				data += '&tr=' + encUri('udp://exodus.desync.com:6969/announce');
+				data += '&tr=' + encUri('udp://tracker3.itzmx.com:6961/announce');
+				data += '&tr=' + encUri('udp://tracker.torrent.eu.org:451/announce');
+				data += '&tr=' + encUri('udp://tracker.tiny-vps.com:6969/announce');
+				data += '&tr=' + encUri('udp://retracker.lanta-net.ru:2710/announce');
+				data += '&tr=' + encUri('http://open.acgnxtracker.com:80/announce');
+				data += '&tr=' + encUri('wss://tracker.openwebtorrent.com');
 				data += '&tr=' + encUri('udp://tracker.coppersurfer.tk:6969/announce');
 				data += '&tr=' + encUri('udp://tracker.internetwarriors.net:1337/announce');
 				data += '&tr=' + encUri('udp://tracker.leechers-paradise.org:6969/announce');
