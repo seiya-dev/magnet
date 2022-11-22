@@ -15,6 +15,7 @@ onReady(function(){
 		var urlr = update();
 		if(urlr){
 			window.location.href = urlr;
+			// window.location.replace(urlr);
 		}
 	}
 });
