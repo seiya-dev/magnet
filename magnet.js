@@ -41,7 +41,7 @@ function update(){
 			var data  = 'magnet:';
 				data += '?xt=urn:btih:' + encUri(document.getElementById('hash').value);
 				// --
-				data += '&tr=' + encUri('http://nyaa.tracker.wf:7777/announce
+				data += '&tr=' + encUri('http://nyaa.tracker.wf:7777/announce');
 				data += '&tr=' + encUri('udp://tracker.coppersurfer.tk:6969/announce');
 				data += '&tr=' + encUri('udp://tracker.opentrackr.org:1337/announce');
 				data += '&tr=' + encUri('udp://9.rarbg.to:2710/announce');
