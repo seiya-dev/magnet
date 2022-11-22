@@ -14,7 +14,7 @@ onReady(function(){
 		document.getElementById('hash').value = thash;
 		var urlr = update();
 		if(urlr){
-			window.location.replace(urlr);
+			window.location.href = urlr;
 		}
 	}
 });
