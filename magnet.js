@@ -36,6 +36,7 @@ function sel_all(el){
 function update(){
 	try{
 		var hash_data = document.getElementById('hash').value;
+		var uri  = location.protocol + '//' + location.hostname + location.pathname;
 		if(checkHash(hash_data)){
 			var data  = 'magnet:';
 				data += '?xt=urn:btih:' + encUri(document.getElementById('hash').value);
@@ -52,8 +53,7 @@ function update(){
 				data += '&tr=' + encUri('http://mgtracker.org:6969/announce');
 			document.getElementById('link').href = data;
 			document.getElementById('link_text').value = data;
-			var uri  = location.protocol + '//' + location.hostname + location.pathname;
-			uri += checkHash(hash_data) ? '?hash='+hash_data : '';
+			uri += '?hash='+hash_data;
 			return data;
 		}
 		return false;
