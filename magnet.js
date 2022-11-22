@@ -52,10 +52,11 @@ function update(){
 				data += '&tr=' + encUri('http://mgtracker.org:6969/announce');
 			document.getElementById('link').href = data;
 			document.getElementById('link_text').value = data;
-		}
-		var uri  = location.protocol + '//' + location.hostname + location.pathname;
+			var uri  = location.protocol + '//' + location.hostname + location.pathname;
 			uri += checkHash(hash_data) ? '?hash='+hash_data : '';
-		return uri;
+			return data;
+		}
+		return false;
 	}
 	catch(e){
 		alert('exception: ' + e);
